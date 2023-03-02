@@ -7,19 +7,17 @@ const app =express()
 
 //cors
 app.use(cors())
+
+//lectura y parseo del body
+app.use(express.json())
+
 //BASE DE DATOS
 dbConnection()
 
 
 // console.log(process.env);
 //rutas
-app.get('/',(req,res)=>{
-
-    res.json({
-        ok:true,
-        msg:'Hola Mundo'
-    })
-});
+app.use('/api/usuarios', require('./routes/usuarios.route'))
 
 
 
