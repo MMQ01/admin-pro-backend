@@ -16,7 +16,11 @@ actualizarHospital} = require('../controllers/hospitales.controller')
 router.get('/',getHospitales);
 
 router.post('/', 
-    [] ,crearHospital);
+    [
+        validarJWT,
+        check('nombre','Nombre del hospital obligatorio').not().isEmpty(),
+        validaCampos
+    ] ,crearHospital);
 
 router.put('/:id',
 [

@@ -20,14 +20,15 @@ const validarJWT =(req,res,next)=>{
 
 
         req.uid=uid
+        console.log(uid);
         next();
 
     } catch (error) {
+        console.log(error);
         return res.status(401).json({
             ok:false,
             msg:'Token incorrecto'
         })
-        console.log(error);
     }
 
 
