@@ -8,6 +8,9 @@ const app =express()
 //cors
 app.use(cors())
 
+//Carpeta public
+app.use(express.static('public'))
+
 //lectura y parseo del body
 app.use(express.json())
 
