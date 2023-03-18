@@ -32,7 +32,7 @@ const getUsuarios=async(req,res)=>{
 
 const crearusuario= async (req,res=response)=>{
 
-    const {nombre,password,email}=req.body;
+    const {password,email}=req.body;
 
     //si el usuario existe
     try {

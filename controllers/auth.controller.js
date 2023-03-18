@@ -73,7 +73,7 @@ const googleSignIn = async (req,res=response)=>{
                 google:true
             })
         }else{
-            usuaio =usuarioDB
+            usuario =usuarioDB
             usuario.google=true
             // usuario.password='@@'
         }

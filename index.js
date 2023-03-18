@@ -29,7 +29,7 @@ app.use('/api/login', require('./routes/auth.route'))
 
 
 
-app.listen(process.env.PORT,()=>{
+app.listen(process.env.PORT,'0.0.0.0',()=>{
     console.log('Servidor corriendo en el prueto '+ process.env.PORT);
 })
 

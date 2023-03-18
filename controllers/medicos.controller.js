@@ -112,7 +112,7 @@ const borrarMedico = async (req,res=response)=>{
 
         
 
-        const medicoActualizado= await Medico.findByIdAndDelete(medicoID)
+         await Medico.findByIdAndDelete(medicoID)
 
 
 
